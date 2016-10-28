@@ -55,6 +55,37 @@ ul.nav a:hover {
   padding-top:em; 
 
 }
+a {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+.flat-butt {
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 16.5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #34495E;
+  color: #FFF;
+  cursor: pointer;
+  outline: 0;
+}
+.flat-primary-butt {
+  background: #1abc9c;
+}
+.flat-primary-butt:hover {
+  background: #2fe2bf;
+}
+.flat-info-butt {
+  background: #3498db;
+}
+.flat-info-butt:hover {
+  background: #5dade2;
+}
   </style>
 </head>
 <body>
@@ -65,7 +96,7 @@ ul.nav a:hover {
         <h1>Juantacolous Client</h1>
         <h4>JUANTACOLOUS CLIENT IS A REVOLUTIONARY CLIENT <BR>WITH THE BEST HACK FEATURES OF THEM ALL!</h3>
           <br><br><br>
-        <button type="button"  class="btn-lg btn-info">GET STARTED</button>
+        <button type="button"  class="flat-butt flat-info-butt">GET STARTED</button>
       </div>
       <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -121,6 +152,8 @@ ul.nav a:hover {
 
     </div>
     <div class="col-lg-8"><h1 style="float:left;]adding-right:4em; text-align:center;">Welcome to the Future!</h1></div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-2"><button type="button"  class="flat-butt flat-info-butt "><a href="">Download Now</a></button></div>
       
 
       
@@ -155,5 +188,6 @@ function showHide(shID) {
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="jquery.easing.min.js"></script>
 <script src="scrolling-nav.js"></script>
+<!-- https://codepen.io/msurguy/pen/Fjuqe -->
 </body>
 </html>
