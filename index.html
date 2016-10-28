@@ -6,6 +6,7 @@
 
 <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/social-share-kit.css" type="text/css">
   <link href="css/scrolling-nav.css" rel="stylesheet">
   <style type="text/css">
   .sec1 {
@@ -92,13 +93,29 @@ a:hover {
   height: 18em;
   border-radius: 0 !important;
 }
-
+.footer {
+  background-color: #616161;
+  height: 3em;
+  color: black;
+}
+.footer a {
+  color: black;
+}
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  position: fixed;
+    width: 100%;
+}
   </style>
 </head>
 <body>
 <div class="container-fluid">
   <div class="row">
-    
+    <div class="ssk-sticky ssk-left ssk-center ssk-lg">
+      <a href="https://www.youtube.com/channel/UCuHQ3bdoirp4Z0EdOma-Nww" class="ssk ssk-youtube"></a>
+      <a href="https://github.com/juantaco/juantaco.github.io" class="ssk ssk-github"></a>
+    </div>
       <div style="color: white; text-align:center;" class="center-block jumbotron sec1"><img src="logo.png"><br>
         <h1>Juantacolous Client</h1>
         <h4>JUANTACOLOUS CLIENT IS A REVOLUTIONARY CLIENT <BR>WITH THE BEST HACK FEATURES OF THEM ALL!</h3>
@@ -194,7 +211,11 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                                 
-    <div class="col-lg-12"></div>
+    <div class="footer col-lg-12">
+      <h4 style="float:right;"><a>Business Email</a></h4>
+      <h4>Website designed by <a href="http://sirhypernova.us.to">SirHyperNova</a></h4>
+
+    </div>
     
   
 </div>
@@ -205,7 +226,24 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 
-
+<script type="text/javascript">
+  
+$(document).ready(function() {
+  
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 280) {
+      $('#nav_bar').addClass('navbar-fixed');
+    }
+    if ($(window).scrollTop() < 281) {
+      $('#nav_bar').removeClass('navbar-fixed');
+    }
+  });
+});
+</script>
 <script type="text/javascript">
 function showHide(shID) {
   if (document.getElementById(shID)) {
