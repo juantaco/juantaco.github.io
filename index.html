@@ -101,12 +101,6 @@ a:hover {
 .footer a {
   color: black;
 }
-.navbar-fixed {
-    top: 0;
-    z-index: 100;
-  position: fixed;
-    width: 100%;
-}
   </style>
 </head>
 <body>
@@ -122,7 +116,7 @@ a:hover {
           <br><br><br>
         <a class="page-scroll" href="#lmore"><button type="button"  href="#lmore" class="flat-butt flat-info-butt">GET STARTED</button></a>
       </div>
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-default sticky">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
@@ -227,21 +221,25 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 <script type="text/javascript">
-  
-$(document).ready(function() {
-  
-  $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
-      console.log($(window).scrollTop())
-    if ($(window).scrollTop() > 280) {
-      $('#nav_bar').addClass('navbar-fixed');
+$(document).ready(function () {
+
+var menu = $('.menu');
+var origOffsetY = menu.offset().top;
+
+function scroll() {
+    if ($(window).scrollTop() >= origOffsetY) {
+        $('.menu').addClass('sticky');
+        $('.content').addClass('menu-padding');
+    } else {
+        $('.menu').removeClass('sticky');
+        $('.content').removeClass('menu-padding');
     }
-    if ($(window).scrollTop() < 281) {
-      $('#nav_bar').removeClass('navbar-fixed');
-    }
-  });
+
+
+   }
+
+  document.onscroll = scroll;
+
 });
 </script>
 <script type="text/javascript">
